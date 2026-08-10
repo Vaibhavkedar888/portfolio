@@ -223,6 +223,13 @@ section {
     max-width: 500px;
 }
 
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 .profile-card {
     position: relative;
     width: 350px;
