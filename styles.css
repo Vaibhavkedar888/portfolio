@@ -232,8 +232,8 @@ section {
 
 .profile-card {
     position: relative;
-    width: 260px;
-    height: 260px;
+    width: 320px;
+    height: 320px;
     margin: 0 auto;
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -828,15 +828,15 @@ section {
     }
 
     .profile-card {
-        width: 220px;
-        height: 220px;
+        width: 280px;
+        height: 280px;
     }
 }
 
 @media (max-width: 480px) {
     .profile-card {
-        width: 200px;
-        height: 200px;
+        width: 240px;
+        height: 240px;
     }
 
     .profile-badge {
