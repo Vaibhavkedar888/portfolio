@@ -1,15 +1,39 @@
 // script.js
 
 document.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeLabel = document.querySelector('.theme-toggle-label');
+
+    const applyTheme = (theme) => {
+        body.setAttribute('data-theme', theme);
+        if (themeLabel) {
+            themeLabel.textContent = theme === 'light' ? 'White' : 'Navy';
+        }
+    };
+
+    const savedTheme = localStorage.getItem('portfolio-theme') || 'navy';
+    applyTheme(savedTheme);
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const nextTheme = body.getAttribute('data-theme') === 'light' ? 'navy' : 'light';
+            applyTheme(nextTheme);
+            localStorage.setItem('portfolio-theme', nextTheme);
+        });
+    }
+
     // Mobile Menu Toggle
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
 
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
