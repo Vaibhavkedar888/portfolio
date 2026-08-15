@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    const savedTheme = localStorage.getItem('portfolio-theme') || 'navy';
+    const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
     applyTheme(savedTheme);
 
     if (themeToggle) {
