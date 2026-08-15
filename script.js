@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const applyTheme = (theme) => {
         body.setAttribute('data-theme', theme);
         if (themeLabel) {
-            themeLabel.textContent = theme === 'light' ? 'White' : 'Navy';
+            themeLabel.textContent = theme === 'light' ? 'White' : 'Blue';
         }
     };
 
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
-            const nextTheme = body.getAttribute('data-theme') === 'light' ? 'navy' : 'light';
+            const nextTheme = body.getAttribute('data-theme') === 'light' ? 'Blue' : 'light';
             applyTheme(nextTheme);
             localStorage.setItem('portfolio-theme', nextTheme);
         });
