@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
-            const nextTheme = body.getAttribute('data-theme') === 'light' ? 'Blue' : 'light';
+            const nextTheme = body.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
             applyTheme(nextTheme);
             localStorage.setItem('portfolio-theme', nextTheme);
         });
